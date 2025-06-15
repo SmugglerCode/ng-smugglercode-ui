@@ -1,0 +1,30 @@
+<div class="sc-textbox-container"
+     [class.disabled]="disabled"
+     (click)="setFocus()">
+
+     <input style="grid-column: 2;"
+            [value]="text"
+            [maxLength]="maxLength"
+            [disabled]="disabled"
+            [class.disabled]="disabled"
+            (input)="textChanged($event)"
+            (blur)="blurChanged()"
+            (keyup.enter)="enterPressed()"
+            #inputfield
+      />
+
+      <div class="sc-icons">
+
+        <!--  clear button  -->
+        <div class="sc-cross sc-textbox-icon"
+             style="grid-column: 1;"
+           (click)="clearPressedEventHandler()"
+           *ngIf="showClearIcon"></div>
+
+                 <div class="{{icon}} sc-textbox-icon"
+             style="grid-column: 2;"
+           (click)="iconPressedEventHandler()"
+           *ngIf="icon != null"></div>
+
+      </div>
+</div>

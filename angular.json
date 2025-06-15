@@ -104,6 +104,39 @@
           }
         }
       }
+    },
+    "smugglercode-ui": {
+      "projectType": "library",
+      "root": "projects/smugglercode-ui",
+      "sourceRoot": "projects/smugglercode-ui/src",
+      "prefix": "sc",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/smugglercode-ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/smugglercode-ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/smugglercode-ui/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/smugglercode-ui/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   }
 }

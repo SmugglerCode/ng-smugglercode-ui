@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'smugglercode-ui-sandbox';
+
+  iconPressedEventHandler(value: string |number) : void {
+    alert(value);
+  }
+
 }

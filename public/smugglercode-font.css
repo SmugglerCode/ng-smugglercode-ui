@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'SmugglerCodeFont';
+  src:  url('fonts/SmugglerCodeFont.eot?qwz6b');
+  src:  url('fonts/SmugglerCodeFont.eot?qwz6b#iefix') format('embedded-opentype'),
+    url('fonts/SmugglerCodeFont.ttf?qwz6b') format('truetype'),
+    url('fonts/SmugglerCodeFont.woff?qwz6b') format('woff'),
+    url('fonts/SmugglerCodeFont.svg?qwz6b#SmugglerCodeFont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="sc-"], [class*=" sc-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'SmugglerCodeFont' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sc-checked-checkbox-fill:before {
+  content: "\e900";
+}
+.sc-checked-checkbox:before {
+  content: "\e901";
+}
+.sc-checked-radio-button:before {
+  content: "\e902";
+}
+.sc-hamburger-menu:before {
+  content: "\e903";
+}
+.sc-triangle-down:before {
+  content: "\e904";
+}
+.sc-triangle-left:before {
+  content: "\e905";
+}
+.sc-triangle-right:before {
+  content: "\e906";
+}
+.sc-triangle-up:before {
+  content: "\e907";
+}
+.sc-unchecked-checkbox:before {
+  content: "\e908";
+}
+.sc-unchecked-radio-button:before {
+  content: "\e909";
+}
+.sc-home:before {
+  content: "\e90a";
+}
+.sc-home2:before {
+  content: "\e90b";
+}
+.sc-home3:before {
+  content: "\e90c";
+}
+.sc-newspaper:before {
+  content: "\e90d";
+}
+.sc-pencil:before {
+  content: "\e90e";
+}
+.sc-pencil2:before {
+  content: "\e90f";
+}
+.sc-image:before {
+  content: "\e910";
+}
+.sc-images:before {
+  content: "\e911";
+}
+.sc-camera:before {
+  content: "\e912";
+}
+.sc-headphones:before {
+  content: "\e913";
+}
+.sc-connection:before {
+  content: "\e91b";
+}
+.sc-podcast:before {
+  content: "\e91c";
+}
+.sc-feed:before {
+  content: "\e91d";
+}
+.sc-mic:before {
+  content: "\e91e";
+}
+.sc-book:before {
+  content: "\e91f";
+}
+.sc-books:before {
+  content: "\e920";
+}
+.sc-file-text:before {
+  content: "\e922";
+}
+.sc-profile:before {
+  content: "\e923";
+}
+.sc-price-tag:before {
+  content: "\e935";
+}
+.sc-price-tags:before {
+  content: "\e936";
+}
+.sc-printer:before {
+  content: "\e954";
+}
+.sc-keyboard:before {
+  content: "\e955";
+}
+.sc-display:before {
+  content: "\e956";
+}
+.sc-laptop:before {
+  content: "\e957";
+}
+.sc-mobile:before {
+  content: "\e958";
+}
+.sc-mobile2:before {
+  content: "\e959";
+}
+.sc-tablet:before {
+  content: "\e95a";
+}
+.sc-tv:before {
+  content: "\e95b";
+}
+.sc-drawer:before {
+  content: "\e95c";
+}
+.sc-drawer2:before {
+  content: "\e95d";
+}
+.sc-box-add:before {
+  content: "\e95e";
+}
+.sc-box-remove:before {
+  content: "\e95f";
+}
+.sc-download:before {
+  content: "\e960";
+}
+.sc-upload:before {
+  content: "\e961";
+}
+.sc-floppy-disk:before {
+  content: "\e962";
+}
+.sc-drive:before {
+  content: "\e963";
+}
+.sc-database:before {
+  content: "\e964";
+}
+.sc-undo:before {
+  content: "\e965";
+}
+.sc-redo:before {
+  content: "\e966";
+}
+.sc-undo2:before {
+  content: "\e967";
+}
+.sc-redo2:before {
+  content: "\e968";
+}
+.sc-forward:before {
+  content: "\e969";
+}
+.sc-reply:before {
+  content: "\e96a";
+}
+.sc-bubble:before {
+  content: "\e96b";
+}
+.sc-search:before {
+  content: "\e986";
+}
+.sc-zoom-in:before {
+  content: "\e987";
+}
+.sc-zoom-out:before {
+  content: "\e988";
+}
+.sc-lock:before {
+  content: "\e98f";
+}
+.sc-unlocked:before {
+  content: "\e990";
+}
+.sc-equalizer:before {
+  content: "\e992";
+}
+.sc-equalizer2:before {
+  content: "\e993";
+}
+.sc-cog:before {
+  content: "\e994";
+}
+.sc-cogs:before {
+  content: "\e995";
+}
+.sc-stats-dots:before {
+  content: "\e99b";
+}
+.sc-stats-bars:before {
+  content: "\e99c";
+}
+.sc-stats-bars2:before {
+  content: "\e99d";
+}
+.sc-bin:before {
+  content: "\e9ac";
+}
+.sc-bin2:before {
+  content: "\e9ad";
+}
+.sc-cross:before {
+  content: "\ea0f";
+}
+.sc-insert-template:before {
+  content: "\ea72";
+}

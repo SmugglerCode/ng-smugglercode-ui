@@ -1,1 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+
+  // GENERAL
+  --disabled-color: #BBB;
+  --primary-color: #444;
+  --primary-text-color: #555;
+  --high-light-contrast-color: #EEE;
+  --border-radius: 0.3125em 0.3125em 0 0;
+  --primary-label-color: #e5007d;
+  --warning-color: #c5064f;
+  --placeholder-color: #7A7A7A;
+
+  // INPUT
+  --textbox-font-size: 16px;
+  --textbox-color: #333;
+  --textbox-color-disabled: lightgray !important;
+  --textbox-outline: none !important;
+  --textbox-outline-focus: none !important;
+
+
+
+  --container-textbox-padding: 5px 8px;
+
+  // LIST ELEMENTS GENERAL
+  --list-highlight-background: #FAFAFA;
+  --list-highlight-color: #be1f8f;
+
+  // CONTAINER GENERAL
+  --container-padding: 3px 8px;
+  --container-border-thickess: 1px;
+  --container-height: 32px;
+  --container-width: 100%;
+
+  --container-border-right: solid 1px #333;
+  --container-border-top: solid 1px #333;
+  --container-border-left: solid 1px #333;
+  --container-border-bottom: solid 1px #333;
+
+  --container-border-right-disabled: solid 1px lightgray;
+  --container-border-top-disabled: solid 1px lightgray;
+  --container-border-left-disabled: solid 1px lightgray;
+  --container-border-bottom-disabled: solid 1px lightgray;
+
+  --container-border-radius: 0;
+
+
+  // BUTTON GENERAL
+  --button-font-size: 1.2em;
+
+  // BUTTON COLLORS PRIMARY
+  --button-primary-background: #444;
+  --button-primary-color: #EEE;
+  --button-primary-background-hover: #222;
+  --button-primary-color-hover: #EEE;
+
+  // BUTTON COLORS WARNING
+  --button-warning-background: rgb(241, 154, 23);
+  --button-warning-color: #EEE;
+  --button-warning-background-hover: rgb(204, 137, 14);
+  --button-warning-color-hover: #EEE;
+
+  // BUTTON COLORS DANGER
+  --button-danger-background: rgb(226, 62, 62);
+  --button-danger-color: #EEE;
+  --button-danger-background-hover: rgb(163, 51, 51);
+  --button-danger-color-hover: #EEE;
+
+  // BUTTON COLORS SUCCESS
+  --button-success-background: rgb(121, 224, 61);
+  --button-success-color: #EEE;
+  --button-success-background-hover: rgb(94, 179, 46);
+  --button-success-color-hover: #EEE;
+
+  // BUTTON COLORS INFO
+  --button-info-background: rgb(72, 181, 224);
+  --button-info-color: #EEE;
+  --button-info-background-hover: rgb(66, 161, 199);
+  --button-info-color-hover: #EEE;
+
+  --button-disabled-color: #EEE;
+  --button-text-alignment: center;
+  --button-display: inline-block;
+  --button-width: inherit;
+}
