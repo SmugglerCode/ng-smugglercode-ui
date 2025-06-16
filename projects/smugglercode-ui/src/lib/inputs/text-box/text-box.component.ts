@@ -16,10 +16,8 @@ export class TextBoxComponent {
 
   @Input() disabled: boolean = false;
   @Input() maxLength: number = 999;
-  @Input() showPostIcon: boolean = false;
-  @Input() showPreIcon: boolean = false;
   @Input() icon: string | null = null;
-  @Input() showClearIcon = false;
+  @Input() showClearIcon: boolean = false;
 
   @Input()
   get text(): string | number {
@@ -31,7 +29,7 @@ export class TextBoxComponent {
 
   /****************** OUTPUT FIELDS ********************************/
 
-  @Output() onTextChange: EventEmitter<any> = new EventEmitter<any>();
+  @Output() textChange: EventEmitter<any> = new EventEmitter<any>();
   @Output() onEnter: EventEmitter<any> = new EventEmitter<any>();
   @Output() onLostFocus: EventEmitter<any> = new EventEmitter<any>();
   @Output() onIconPressed: EventEmitter<any> = new EventEmitter<any>();
@@ -51,13 +49,13 @@ export class TextBoxComponent {
   public textChanged(event: any): void {
     if (event && event.target) {
       this._text = event.target.value;
-      this.onTextChange.emit(event.target.value);
+      this.textChange.emit(event.target.value);
     }
   }
 
   public clear(): void {
     this.text = '';
-    this.onTextChange.emit(this._text);
+    this.textChange.emit(this._text);
   }
 
   public enterPressed(): void {

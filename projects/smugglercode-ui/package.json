@@ -1,6 +1,10 @@
 {
-  "name": "smugglercode-ui",
-  "version": "0.0.1",
+  "name": "smugglercode-ui", 
+  "version": "1.1.0",
+  "description": "UI component library for angular",
+  "Author": "Tommy Ceusters",
+  "license": "MIT",
+  "keywords": ["angular", "ui", "smugglercode", "components"],
   "peerDependencies": {
     "@angular/common": "^19.2.0",
     "@angular/core": "^19.2.0"
