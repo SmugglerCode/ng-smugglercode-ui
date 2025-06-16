@@ -1,6 +1,42 @@
-Mijn test pagina.
+<sc-header [showDivider]="true">Customer.</sc-header>
 
-<sc-text-box [showClearIcon]="true" (onIconPressed)="iconPressedEventHandler($event)" [icon]="'sc-search'" [maxLength]="10"></sc-text-box>
-<sc-text-box [icon]="'sc-cross'" [disabled]="true" [text]="'test'"></sc-text-box>
+<div class="grid-1fr-1fr">
 
-dit is een test
+    <sc-header [size]="2">General info</sc-header>
+
+    <sc-input-group label="Name" style="grid-column: 1;">
+        <sc-text-box [showClearIcon]="true" (onIconPressed)="iconPressedEventHandler($event)" [icon]="'sc-search'" [maxLength]="10"></sc-text-box>
+    </sc-input-group>
+
+    <sc-input-group label="Last name">
+        <sc-text-box [showClearIcon]="true" [(text)]="person.name"></sc-text-box>
+    </sc-input-group>
+
+    <sc-header [size]="2">Address</sc-header>
+
+    <div class="grid-1fr-auto" style="grid-column: 1;">
+        <sc-input-group label="Street">
+            <sc-text-box [showClearIcon]="true" (onIconPressed)="iconPressedEventHandler($event)" [icon]="'sc-search'" [maxLength]="10"></sc-text-box>
+        </sc-input-group>
+
+        <sc-input-group label="House number" width="100px">
+            <sc-text-box [showClearIcon]="true" [(text)]="person.name"></sc-text-box>
+        </sc-input-group>
+    </div>
+
+    <div></div>
+
+    <div class="grid-auto-1fr">
+        <sc-input-group label="Zipcode" width="150px">
+            <sc-text-box [showClearIcon]="true" (onIconPressed)="iconPressedEventHandler($event)" [icon]="'sc-search'" [maxLength]="10"></sc-text-box>
+        </sc-input-group>
+
+        <sc-input-group label="City">
+            <sc-text-box [showClearIcon]="true" [(text)]="person.name"></sc-text-box>
+        </sc-input-group>
+    </div>
+
+
+</div>
+
+<div>Name: {{ person.name}}</div>

@@ -17,6 +17,13 @@ div.sc-textbox-container {
   grid-template-columns: auto 1fr auto;
 }
 
+div.sc-textbox-container:focus-within {
+  border-top: var(--container-border-top-focus);
+  border-bottom: var(--container-border-bottom-focus);
+  border-left: var(--container-border-left-focus);
+  border-right: var(--container-border-right-focus);
+}
+
 div.sc-textbox-container > input {
   width: 100%;
   font-size: var(--textbox-font-size);
@@ -24,6 +31,7 @@ div.sc-textbox-container > input {
   border: none;
   outline: var(--textbox-outline);
   color: var(--textbox-color);
+  background-color: transparent;
 }
 
 div.sc-textbox-container > input:focus {

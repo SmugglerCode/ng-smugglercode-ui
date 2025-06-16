@@ -1,7 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
-:root {
+.dark-theme-container {
+    background: linear-gradient(to bottom right, #101010, #222);
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    padding: 32px;
+    box-sizing: border-box;
+    color: white;
+}
 
-  // GENERAL
+body {
+    padding: 0px;
+    margin: 0;
+}
+
+.dark-theme {
+  
+  --sm-no-distance: 0;
+  --xs-distance: 4px;
+  --sm-distance: 8px;
+  --md-distance: 16px;
+  --l-distance: 24px;
+  --xl-distance: 32px;
+  --xxl-distance: 40px;
+
+  --header-001-color: #ffaa00;
+  --header-001-font-size: 24px;
+
+  --header-002-color: #ffcc33;
+  --header-002-font-size: 20px;
+
+
+  /* GENERAL */
   --disabled-color: #BBB;
   --primary-color: #444;
   --primary-text-color: #555;
@@ -11,37 +41,29 @@
   --warning-color: #c5064f;
   --placeholder-color: #7A7A7A;
 
-  // INPUT
+  /* INPUT  */
   --textbox-font-size: 16px;
-  --textbox-color: #333;
+  --textbox-color: #FFF;
   --textbox-color-disabled: lightgray !important;
   --textbox-outline: none !important;
   --textbox-outline-focus: none !important;
 
-
-
   --container-textbox-padding: 5px 8px;
 
-  // LIST ELEMENTS GENERAL
+  /* LIST ELEMENTS GENERAL */
   --list-highlight-background: #FAFAFA;
   --list-highlight-color: #be1f8f;
 
-  // CONTAINER GENERAL
+  /* CONTAINER GENERAL */
   --container-padding: 3px 8px;
   --container-border-thickess: 1px;
   --container-height: 32px;
   --container-width: 100%;
 
-  --container-border-right: solid 1px #333;
-  --container-border-top: solid 1px #333;
-  --container-border-left: solid 1px #333;
-  --container-border-bottom: solid 1px #333;
-
-  --container-border-top-focus: solid 1px #ffaa00;
-  --container-border-bottom-focus: solid 1px #ffaa00;
-  --container-border-left-focus: solid 1px #ffaa00;
-  --container-border-right-focus: solid 1px #ffaa00;
-
+  --container-border-right: solid 1px #FFF;
+  --container-border-top: solid 1px #FFF;
+  --container-border-left: solid 1px #FFF;
+  --container-border-bottom: solid 1px #FFF;
 
   --container-border-right-disabled: solid 1px lightgray;
   --container-border-top-disabled: solid 1px lightgray;
@@ -51,34 +73,34 @@
   --container-border-radius: 0;
 
 
-  // BUTTON GENERAL
+  /* BUTTON GENERAL */
   --button-font-size: 1.2em;
 
-  // BUTTON COLLORS PRIMARY
+  /* BUTTON COLLORS PRIMARY  */
   --button-primary-background: #444;
   --button-primary-color: #EEE;
   --button-primary-background-hover: #222;
   --button-primary-color-hover: #EEE;
 
-  // BUTTON COLORS WARNING
+  /* BUTTON COLORS WARNING */
   --button-warning-background: rgb(241, 154, 23);
   --button-warning-color: #EEE;
   --button-warning-background-hover: rgb(204, 137, 14);
   --button-warning-color-hover: #EEE;
 
-  // BUTTON COLORS DANGER
+  /* BUTTON COLORS DANGER */
   --button-danger-background: rgb(226, 62, 62);
   --button-danger-color: #EEE;
   --button-danger-background-hover: rgb(163, 51, 51);
   --button-danger-color-hover: #EEE;
 
-  // BUTTON COLORS SUCCESS
+  /* BUTTON COLORS SUCCESS */
   --button-success-background: rgb(121, 224, 61);
   --button-success-color: #EEE;
   --button-success-background-hover: rgb(94, 179, 46);
   --button-success-color-hover: #EEE;
 
-  // BUTTON COLORS INFO
+  /* BUTTON COLORS INFO */
   --button-info-background: rgb(72, 181, 224);
   --button-info-color: #EEE;
   --button-info-background-hover: rgb(66, 161, 199);
@@ -88,4 +110,22 @@
   --button-text-alignment: center;
   --button-display: inline-block;
   --button-width: inherit;
+}
+
+.grid-1fr-1fr {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--xl-distance);
+}
+
+.grid-1fr-auto {
+  display:grid;
+  grid-template-columns: 1fr auto;
+  column-gap: var(--xl-distance);
+}
+
+.grid-auto-1fr {
+  display:grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--xl-distance);
 }

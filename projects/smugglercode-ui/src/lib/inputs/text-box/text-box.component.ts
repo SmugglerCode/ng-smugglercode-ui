@@ -9,7 +9,6 @@ import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, Ou
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TextBoxComponent {
-  private _text: string | number = '';
   private _inputElementRef: ElementRef | undefined | null;
 
   /****************** INPUT FIELDS *********************************/
@@ -18,18 +17,12 @@ export class TextBoxComponent {
   @Input() maxLength: number = 999;
   @Input() icon: string | null = null;
   @Input() showClearIcon: boolean = false;
-
-  @Input()
-  get text(): string | number {
-    return this._text;
-  }
-  set text(value: string) {
-    this._text = value?.toString() ?? '';
-  }
+  @Input() text: string | number = '';
+  @Input() width: string = '100%';
 
   /****************** OUTPUT FIELDS ********************************/
 
-  @Output() textChange: EventEmitter<any> = new EventEmitter<any>();
+  @Output() textChange: EventEmitter<string | number> = new EventEmitter<string | number>();
   @Output() onEnter: EventEmitter<any> = new EventEmitter<any>();
   @Output() onLostFocus: EventEmitter<any> = new EventEmitter<any>();
   @Output() onIconPressed: EventEmitter<any> = new EventEmitter<any>();
@@ -42,29 +35,33 @@ export class TextBoxComponent {
 
   /****************** PUBLIC METHODS ********************************/
 
+  get CssStyle(): string {
+    return `width: ${this.width}`;
+  }
+
   public blurChanged(): void {
-    this.onLostFocus.emit(this._text);
+    this.onLostFocus.emit(this.text);
   }
 
   public textChanged(event: any): void {
     if (event && event.target) {
-      this._text = event.target.value;
+      this.text = event.target.value;
       this.textChange.emit(event.target.value);
     }
   }
 
   public clear(): void {
     this.text = '';
-    this.textChange.emit(this._text);
+    this.textChange.emit('');
   }
 
   public enterPressed(): void {
-    this.onEnter.emit(this._text);
+    this.onEnter.emit(this.text);
   }
 
   public iconPressedEventHandler() {
     if (this.disabled) return;
-    this.onIconPressed.emit(this._text);
+    this.onIconPressed.emit(this.text);
   }
 
   public clearPressedEventHandler() {

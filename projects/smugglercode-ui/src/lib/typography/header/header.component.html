@@ -1,0 +1,5 @@
+<div class="sc-header-container {{CssSize}}" [class.sc-header-margin]="!showDivider">
+    {{ label }}
+    <ng-content *ngIf="label === null"></ng-content>
+</div>
+<div class="sc-header-divider {{CssSize}}" [class.sc-header-margin]="showDivider" *ngIf="showDivider"></div>
