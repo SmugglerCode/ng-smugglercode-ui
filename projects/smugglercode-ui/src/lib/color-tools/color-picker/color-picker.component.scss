@@ -1,0 +1,88 @@
+.main-color-range {
+  background: linear-gradient(
+    #ff0000,
+    #FFFF00,
+    #00FFFF,
+    #0000FF,
+    #FF00FF,
+    #FF0000,
+  );
+  height: 256px;
+  width:30px;
+}
+
+.label {
+  font-size: 24px;
+  padding: 7px 10px 0 0;
+  color: steelblue;
+}
+
+.canvas-svg-group {
+  position: relative;
+  width: 256px;
+  height:256px;
+  border: solid 1px white;
+
+}
+
+.svg-area {
+  width: 256px;
+  height:256px;
+}
+
+.canvas-svg-group > *{
+  position: absolute;
+}
+
+.color-example {
+  width: 32px;
+  height: 32px;
+  border: solid 1px white;
+  box-sizing: border-box;
+}
+
+.color-area {
+  display:grid;
+  grid-template-columns: auto auto 1fr;
+  column-gap: 10px;
+}
+
+.label-value {
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: 0px;
+  align-content: flex-start;
+  row-gap: 10px;
+}
+
+.grid {
+  display: grid;
+  column-gap: 10px;
+}
+
+.grid-1fr-auto {
+  grid-template-columns: 1fr auto;
+  column-gap: 10px;
+}
+
+.grid-auto-1fr {
+  grid-template-columns: auto 1fr;
+}
+
+.margin-bottom {
+  margin-bottom: 10px;
+}
+
+.grid-auto-1fr-auto {
+  grid-template-columns: auto 1fr auto;
+}
+
+.color-canvas-pointer {
+  position:absolute;
+  width:20px;
+  height:10px;
+  top:-5px;
+  left:26px;
+  fill:white;
+}

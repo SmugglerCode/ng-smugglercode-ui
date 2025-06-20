@@ -1,0 +1,39 @@
+.sc-color-item {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    width: 420px;
+}
+
+.sc-color-details {
+    background: #333;
+    color: #333;
+    width: 400px;
+    height: 60px;
+    box-sizing: border-box;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.sc-color-header {
+    color: white;
+    margin-bottom:10px;
+}
+.sc-color-tags {
+    color: #62ccd3
+;
+}
+
+.sc-color-example {
+    width: 20px;
+    height: 100%;
+    box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

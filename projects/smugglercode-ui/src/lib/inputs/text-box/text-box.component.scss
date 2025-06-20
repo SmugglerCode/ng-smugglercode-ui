@@ -11,10 +11,10 @@ div.sc-textbox-container {
   width: var(--container-width); 
 
   box-sizing: border-box;
-  display: inline-block;
 
   display: grid;
   grid-template-columns: auto 1fr auto;
+
 }
 
 div.sc-textbox-container:focus-within {

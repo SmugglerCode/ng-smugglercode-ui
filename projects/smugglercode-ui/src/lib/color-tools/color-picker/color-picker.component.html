@@ -1,0 +1,31 @@
+<div class="color-area margin-bottom">
+
+  <!-- MAIN COLOR PICKER AREA -->
+  <div class="canvas-svg-group">
+    <canvas #mainColorCanvas width="256" height="256"></canvas>
+    <svg class="svg-area" (mousedown)="selectFinalColor($event)">
+      <circle [attr.cx]="x" [attr.cy]="y" r="5" stroke="white" stroke-width="2" fill="transparent"></circle>
+    </svg>
+  </div> 
+
+    <div class="color-canvas-pointer"></div>
+
+  <!-- MULTI COLOR SELECTOR -->
+   <div style="position: relative; width: 30px; height: 256px; border: solid 1px white;">
+    <canvas #colorCanvas width="30" height="256" (mousedown)="selectColor($event)"></canvas>
+    <svg [style.top.px]="colorArrowY" id="triangle" class="color-canvas-pointer" viewBox="0 0 30 30">
+      <polygon points="0 15, 30 0, 30 30"/>
+    </svg>
+  </div>
+
+</div>
+
+<div style="width: 300px">
+
+  <!-- SELECTED COLOR-->
+  <div class="grid grid-auto-1fr margin-bottom">
+    <div class="color-example" [style.backgroundColor]="viewModel.currentColor.colorAsHex"></div>
+    <sc-text-box icon="sc-plus" (onIconPressed)="addColor(viewModel.currentColor)" [(text)]="viewModel.currentColor.colorAsHex"></sc-text-box>
+  </div>
+
+</div>

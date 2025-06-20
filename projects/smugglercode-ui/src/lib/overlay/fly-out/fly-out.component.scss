@@ -1,0 +1,88 @@
+div.sc-fly-out-container div.sc-fly-out-header {
+  border-top: var(--container-border-top);
+  border-bottom: var(--container-border-bottom);
+  border-left: var(--container-border-left);
+  border-right: var(--container-border-right);
+
+  border-radius: var(--container-border-radius);
+
+  padding: var(--container-padding);
+  height: var(--container-height);
+  width: var(--container-width); 
+
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  color: var(--textbox-color);
+}
+
+div.sc-fly-out-header.disabled {
+  border: var(--container-line-style) var(--container-line-width) var(--disabled-color);  color: var(--disabled-color);
+}
+
+div.sc-fly-out-container div.sc-fly-out-header .sc-triangle-left-icon,
+div.sc-fly-out-container div.sc-fly-out-header .sc-triangle-down-icon {
+  position: relative;
+  top:3px;
+  font-size: 14px;  
+  color: var(--textbox-color);
+}
+
+.fly-out-content {
+  position: absolute;
+  top: 1px;
+  box-sizing: border-box;
+  color: var(--textbox-color);
+  background-color: white; 
+  overflow: auto;
+  z-index: 1000;
+
+  border-top: var(--container-border-top);
+  border-bottom: var(--container-border-bottom);
+  border-left: var(--container-border-left);
+  border-right: var(--container-border-right);
+
+  width: 100%;
+}
+
+.sc-fly-out-placeholder {
+  position:relative;
+}
+
+.fly-out-body{
+  position: absolute;
+}
+
+.scrollbar {
+  width: 100%; 
+  overflow-y: auto; 
+  border-top: none; 
+  border-radius: 0;
+  box-sizing: border-box;
+  scrollbar-color: #444 transparent;
+  scrollbar-width: 5px;
+}
+
+.scrollbar::-webkit-scrollbar {
+  border-radius: 100%;
+  width: 5px;
+  scrollbar-track-color: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  width: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  color: red;
+  background-color: red;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.scrollbar::-webkit-scrollbar-button {
+  display: none;
+}

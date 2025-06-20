@@ -1,1 +1,13 @@
-<p>button works!</p>,
+<div class="button-container"
+     [class.primary-button]="type === buttonTypes.Primary"
+     [class.warning-button]="type === buttonTypes.Warning"
+     [class.danger-button]="type === buttonTypes.Danger"
+     [class.success-button]="type === buttonTypes.Success"
+     [class.info-button]="type === buttonTypes.Info"
+     [class.disabled]="disabled"
+     (click)="clicked($event)">
+     <div class="button-label">
+      <ng-content></ng-content>
+      {{ label }}
+     </div>
+</div>

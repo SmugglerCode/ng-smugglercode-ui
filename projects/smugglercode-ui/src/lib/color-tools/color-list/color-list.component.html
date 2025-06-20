@@ -1,0 +1,19 @@
+<div class="sc-color-container">
+
+    <sc-header [size]="2" *ngIf="showHeader">Color manager.</sc-header>
+
+    <div *ngIf="!colors || colors.length == 0">
+        There are currently no colors in the list. Please add one to get started.
+    </div>
+
+    <ng-container *ngFor="let color of colors">
+        <div class="sc-color-item">
+            <div class="sc-color-example" [style.background]="color.colorAsHex"></div>
+            <div class="sc-color-details">
+                <div class="sc-color-header">{{ color.colorAsHex }}</div>
+                <div class="sc-color-tags">Mijn naam</div>
+            </div>
+        </div>
+    </ng-container> 
+
+</div>

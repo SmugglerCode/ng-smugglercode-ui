@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 .dark-theme-container {
-    background: linear-gradient(to bottom right, #101010, #222);
+    background: linear-gradient(to bottom right, #101010, #333);
     width: 100vw;
     height: 100vh;
     overflow: auto;
@@ -65,6 +65,11 @@ body {
   --container-border-left: solid 1px #FFF;
   --container-border-bottom: solid 1px #FFF;
 
+  --container-border-top-focus: solid 1px #ffaa00;
+  --container-border-bottom-focus: solid 1px #ffaa00;
+  --container-border-left-focus: solid 1px #ffaa00;
+  --container-border-right-focus: solid 1px #ffaa00;
+
   --container-border-right-disabled: solid 1px lightgray;
   --container-border-top-disabled: solid 1px lightgray;
   --container-border-left-disabled: solid 1px lightgray;
@@ -127,5 +132,11 @@ body {
 .grid-auto-1fr {
   display:grid;
   grid-template-columns: auto 1fr;
+  column-gap: var(--xl-distance);
+}
+
+.grid-auto-auto-1fr {
+  display:grid;
+  grid-template-columns: auto auto 1fr;
   column-gap: var(--xl-distance);
 }

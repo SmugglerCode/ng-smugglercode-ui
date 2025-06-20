@@ -1,0 +1,34 @@
+<div class="sc-fly-out-container" #flyOutHeader tabindex="0" (focus)="toggleFlyOut()">
+
+  <!-- HEADER -->
+  <div class="sc-fly-out-header"
+       [class.disabled]="disabled"
+       style="overflow: hidden"
+       (click)="toggleFlyOut()"
+       #flyoutheader>
+    <div class="grid grid-1fr-auto">
+
+      <!-- HEADER CONTENT -->
+      <div>
+        <ng-content select="[header]"></ng-content>
+      </div>
+
+      <!-- FLY OUT ICONS -->
+      <div>
+        <div class="padding-sm" style="color: #888" *ngIf="_showContent"><em class="sc-triangle-down sc-triangle-down-icon"></em></div>
+        <div class="padding-sm" style="color: #888" *ngIf="!_showContent"><em class="sc-triangle-left sc-triangle-left-icon"></em></div>
+      </div>
+    </div>
+  </div>
+
+  <!--  DROP DOWN PART  -->
+  <div class="sc-fly-out-placeholder">
+    <!-- FLY OUT CONTENT-->
+        <div class="fly-out-content scrollbar"
+            *ngIf="contentHeight > 0"
+            [style.height.px]="contentHeight"
+            #flyOutContent>
+        <ng-content select="[content]"></ng-content>
+    </div>
+  </div>
+</div>

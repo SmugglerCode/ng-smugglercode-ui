@@ -1,0 +1,60 @@
+<sc-fly-out [(showContent)]="showContent" 
+            [disabled]="disabled" 
+            [dropDownHeight]="dropDownHeight">
+
+  <!-- HEADER -->
+  <div header>
+      <!-- header -->
+      <div class="drop-down-header
+                  flex
+                  flex-row
+                  align-items-center
+                  padding-sm" style="height: 100%"
+      >
+
+        <!-- HEADER - NO TEMPLATE SET -->
+        <span *ngIf="!headerTemplate && item" class="drop-down-header" [class.disabled]="disabled"  >
+          <ng-container *ngIf="!displayProperty">{{ item }}</ng-container>
+          <ng-container *ngIf="displayProperty">{{ selectableItem?.label }}</ng-container>
+        </span>
+
+        <!-- HEADER - TEMPLATE -->
+        <ng-container *ngIf="headerTemplate">
+          <ng-container *ngTemplateOutlet="headerTemplate;context: { $implicit: item }"></ng-container>
+        </ng-container>
+
+        <!-- NO ITEM SELECTED - PLACEHOLDER -->
+        <span class="placeholder" [class.disabled]="disabled" *ngIf="!item">{{ placeholder }}</span>
+
+      </div>
+  </div>
+
+  <!-- DROP DOWN CONTENT --> 
+  <div content class="drop-down-content">
+
+    <!-- SEARCH FIELD -->
+    <div *ngIf="showSearchField" class="thin">
+      <sc-text-box icon="search" (textChange)="searchText($event)"></sc-text-box>
+    </div>
+
+    <!-- CONTENT NO TEMPLATE SET -->
+    <ng-container *ngIf="!contentTemplate">
+      <div class="default-layout no-record" *ngIf="selectableItems && selectableItems.length === 0">No items found</div>
+      <div class="drop-down-item default-layout" (click)="selectionChanged(item)" *ngFor="let item of selectableItems">
+        {{ item.label }}
+      </div>
+    </ng-container>
+
+    <!-- TEMPLATE -->
+    <ng-container *ngIf="contentTemplate">
+      <ng-container *ngFor="let item of selectableItems">
+        <div class="drop-down-item" (click)="selectionChanged(item)">
+          <ng-container *ngTemplateOutlet="contentTemplate;context:{$implicit: item.itemRef}" ></ng-container>
+        </div>
+      </ng-container>
+    </ng-container>
+
+    <ng-template #noresult>No items could be found.</ng-template>
+
+  </div>
+</sc-fly-out>

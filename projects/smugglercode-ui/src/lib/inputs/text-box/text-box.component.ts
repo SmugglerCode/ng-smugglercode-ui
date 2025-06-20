@@ -17,15 +17,15 @@ export class TextBoxComponent {
   @Input() maxLength: number = 999;
   @Input() icon: string | null = null;
   @Input() showClearIcon: boolean = false;
-  @Input() text: string | number = '';
+  @Input() text: string = '';
   @Input() width: string = '100%';
 
   /****************** OUTPUT FIELDS ********************************/
 
-  @Output() textChange: EventEmitter<string | number> = new EventEmitter<string | number>();
-  @Output() onEnter: EventEmitter<any> = new EventEmitter<any>();
-  @Output() onLostFocus: EventEmitter<any> = new EventEmitter<any>();
-  @Output() onIconPressed: EventEmitter<any> = new EventEmitter<any>();
+  @Output() onEnter: EventEmitter<string> = new EventEmitter<any>();
+  @Output() onIconPressed: EventEmitter<string> = new EventEmitter<any>();
+  @Output() onLostFocus: EventEmitter<string> = new EventEmitter<any>();
+  @Output() textChange: EventEmitter<string> = new EventEmitter<string>();
 
 /****************** VIEWCHILD DEFINITIONS ************************/
 

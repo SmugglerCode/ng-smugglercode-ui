@@ -37,6 +37,52 @@
     </div>
 
 
+<div>
+
+<sc-input-group label="Kleuren">
+    <sc-drop-down [dropDownHeight]="300" [items]="color"></sc-drop-down>
+</sc-input-group>
+
+<sc-input-group label="Kleuren">
+    <sc-drop-down [dropDownHeight]="300" [items]="color">
+        <ng-template #contentTemplate let-color>
+            <div class="custom-country">
+                <div style="width:20px;height:20px;" [style.color]="color"></div> {{ color }} xc
+            </div>
+        </ng-template>
+    </sc-drop-down>
+</sc-input-group>
+
+
+<sc-input-group label="Kleuren">
+    <sc-drop-down [dropDownHeight]="300" [items]="color">
+        <ng-template #headerTemplate let-color>
+            Selected color: <span [style.color]="color">{{color}}</span>
+        </ng-template>
+
+        <ng-template #contentTemplate let-color>
+            <div style="display: grid; grid-template-columns: auto 1fr;">
+                <div style="width:20px;height:20px;" [style.background]="color" ></div> {{ color }} xc
+            </div>
+        </ng-template>
+    </sc-drop-down>
+</sc-input-group>
+
 </div>
 
-<div>Name: {{ person.name}}</div>
+</div>
+<br>
+<br>
+
+<div class="grid-auto-auto-1fr">
+    <sc-color-picker (onAddColor)="addColorEventHandler($event)"></sc-color-picker>
+
+    <sc-color-list [colors]="colors"></sc-color-list>
+
+    <div class="grid-1fr-auto">
+        <sc-color-palette [colors]="colors"></sc-color-palette>
+        <img src="dex_painting.png" width="400" />
+    </div>
+
+</div>
+

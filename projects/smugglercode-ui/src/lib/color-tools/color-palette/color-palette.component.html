@@ -1,0 +1,43 @@
+<div>
+
+    <div *ngFor="let color of colors" class="color-example" [style.background]="color.colorAsHex">
+        
+    </div>
+
+</div>
+
+<!-- COLOR GROUPS HEADER -->
+<!-- <div style="background:#333;color: white;padding: 10px;" class="margin-bottom">Color groups</div> -->
+
+<!-- COLOR GROUPS -->
+<!-- <div class="grid grid-1fr-auto margin-bottom"> -->
+
+    <!-- TEXT BOX: COLOR GROUP NAME -->
+<!-- <sc-text-box [(text)]="viewModel.colorGroupName"></sc-text-box> -->
+<!-- BUTTON: ADD COLOR GROUP -->
+
+<!-- <sc-button (click)="viewModel.addColorGroup(viewModel.colorGroupName)">Add</sc-button>
+</div> -->
+
+    <!-- COLOR GROUS LIST | DROP DOWN -->
+    <!-- <sc-drop-down class="margin-bottom" style="display: block;" [items]="viewModel.colorGroups" displayProperty="name" [(item)]="viewModel.selectedColorGroup"></inti-drop-down> -->
+
+
+  <!-- COLOR GROUPS -->
+  <!-- <ng-container *ngIf="showColorPalette && viewModel.selectedColorGroup"> -->
+    <!-- COLOR GROUPS HEADER -->
+    <!-- <div style="background:#333;color: white;padding: 10px;" class="margin-bottom"> -->
+      <!-- Color palette:  -->
+      <!-- <ng-container *ngIf="viewModel.selectedColorGroup != null">
+        {{viewModel.selectedColorGroup.name}}
+      </ng-container> -->
+    <!-- </div> -->
+
+    <!-- COLOR GROUP SWATCH -->
+    <!-- <inti-color-group [colors]="viewModel.selectedColorGroup.colors" 
+                      (selectionChanged)="selectColorFromSwatch($event)"></inti-color-group> -->
+
+    <!-- MESSAGE IF NO COLORS ARE PRESENT-->
+    <!-- <div *ngIf="viewModel.selectedColorGroup.colors.length === 0">No colors added yet!</div> -->
+
+  <!-- </ng-container> -->
