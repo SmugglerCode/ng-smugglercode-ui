@@ -4,6 +4,7 @@
 
 export * from './lib/color-tools/color-list/color-list.component';
 export * from './lib/color-tools/color-picker/color-picker.component';
+export * from './lib/color-tools/color-palette/color-palette.component';
 export * from './lib/inputs/drop-down/drop-down.component';
 export * from './lib/overlay/fly-out/fly-out.component';
 export * from './lib/typography/header/header.component';
