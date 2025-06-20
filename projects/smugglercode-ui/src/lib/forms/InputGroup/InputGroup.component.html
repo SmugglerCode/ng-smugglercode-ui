@@ -1,5 +1,5 @@
 <div class="sc-input-group" [style]="CssStyle">
-    <div class="sc-input-group-label">{{ label }}</div>
+    <div class="sc-input-group-label">{{ label }}<span *ngIf="!label || label.trim() == ''">&nbsp;</span></div>
 
     <ng-content></ng-content>
 

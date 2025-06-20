@@ -10,6 +10,7 @@ import { ColorListComponent } from "../../projects/smugglercode-ui/src/lib/color
 import { ColorPaletteComponent } from "../../projects/smugglercode-ui/src/lib/color-tools/color-palette/color-palette.component";
 import { DropDownComponent} from './../../projects/smugglercode-ui/src/lib/inputs/drop-down/drop-down.component'
 import { HeaderComponent } from './../../projects/smugglercode-ui/src/lib/typography/header/header.component'
+import { CheckBoxComponent } from "../../projects/smugglercode-ui/src/lib/inputs/check-box/check-box.component";
 @NgModule({
   declarations: [
     AppComponent
@@ -23,7 +24,8 @@ import { HeaderComponent } from './../../projects/smugglercode-ui/src/lib/typogr
     ColorPickerComponent,
     ColorListComponent,
     ColorPaletteComponent,
-    DropDownComponent
+    DropDownComponent,
+    CheckBoxComponent
 ],
   providers: [],
   bootstrap: [AppComponent]

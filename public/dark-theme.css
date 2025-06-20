@@ -30,6 +30,8 @@ body {
   --header-002-color: #ffcc33;
   --header-002-font-size: 20px;
 
+  --text-color: white;
+  --focus-color: #FFAA00;
 
   /* GENERAL */
   --disabled-color: #BBB;
@@ -51,8 +53,11 @@ body {
   --container-textbox-padding: 5px 8px;
 
   /* LIST ELEMENTS GENERAL */
-  --list-highlight-background: #FAFAFA;
-  --list-highlight-color: #be1f8f;
+  --list-highlight-background: #FFAA00;
+  --list-highlight-hover-background: #ffcc33;
+
+  --list-highlight-color: #333;
+  --fly-out-background: #111;
 
   /* CONTAINER GENERAL */
   --container-padding: 3px 8px;

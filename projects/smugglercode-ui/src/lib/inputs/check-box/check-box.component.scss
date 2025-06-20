@@ -1,0 +1,26 @@
+div.sc-check-box-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.5em;
+  outline: none;
+}
+
+div.sc-check-box-container:focus .sc-check-box-icon{
+  color: var(--focus-color);
+}
+
+.sc-check-box-icon {
+  position:relative;
+  top:3px;
+  font-size:24px;
+  color: var(--text-color);
+}
+
+.label {
+  position:relative;
+  top: 1.5px;
+  color: var(--text-color);
+  padding-top:0.2em;
+}
+
+

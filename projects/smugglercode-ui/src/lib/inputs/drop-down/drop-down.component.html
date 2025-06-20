@@ -39,16 +39,30 @@
 
     <!-- CONTENT NO TEMPLATE SET -->
     <ng-container *ngIf="!contentTemplate">
-      <div class="default-layout no-record" *ngIf="selectableItems && selectableItems.length === 0">No items found</div>
-      <div class="drop-down-item default-layout" (click)="selectionChanged(item)" *ngFor="let item of selectableItems">
+
+      <!--  NO ITEM FOUND MESSAGE  -->
+      <div class="default-layout no-record" 
+           *ngIf="selectableItems && selectableItems.length === 0">No items found
+      </div>
+
+      <!--  ITEM  -->
+      <div class="sc-drop-down-item" 
+          tabindex="0" 
+          (keydown)="keydownEventHandler($event, i)" 
+          (click)="selectionChanged(item)" 
+          [class.sc-selected]="item.isSelected"
+          *ngFor="let item of selectableItems; let i = index">
         {{ item.label }}
       </div>
     </ng-container>
 
     <!-- TEMPLATE -->
     <ng-container *ngIf="contentTemplate">
-      <ng-container *ngFor="let item of selectableItems">
-        <div class="drop-down-item" (click)="selectionChanged(item)">
+      <ng-container *ngFor="let item of selectableItems; let i = index">
+        <div class="sc-drop-down-item" 
+             tabindex="0"
+             (keydown)="keydownEventHandler($event, i)" 
+             (click)="selectionChanged(item)">
           <ng-container *ngTemplateOutlet="contentTemplate;context:{$implicit: item.itemRef}" ></ng-container>
         </div>
       </ng-container>

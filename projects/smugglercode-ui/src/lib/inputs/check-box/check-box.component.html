@@ -1,0 +1,14 @@
+<div #container class="sc-check-box sc-check-box-container" tabindex="0" (keydown)="keyboardEventHandler($event)">
+  <div class="sc-check-box-icon" (click)="toggle()" 
+       [class.sc-checked-checkbox]="checked"
+       [class.sc-unchecked-checkbox]="!checked">
+  </div>
+  <div class="label">{{label}}<ng-content *ngIf="!label || label.trim() == ''"></ng-content></div>
+</div>  
+
+<div *ngIf="label == null || label.trim() == ''" 
+     class="check-box-icon check-box" 
+     (click)="toggle()" 
+     [class.intilium-checked-1]="checked"
+     [class.intilium-unchecked-1]="!checked">
+</div>

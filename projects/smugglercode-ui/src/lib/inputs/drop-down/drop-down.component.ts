@@ -95,6 +95,10 @@ export class DropDownComponent<T> {
    * PUBLIC METHODS
    **********************************************************************************************/
   public selectionChanged(item: SelectableItem<T>) {
+
+    this.selectableItems.forEach(i => { i.isSelected = false; });
+    item.isSelected = true;
+
     this.selectableItem = item;
     this.item = item.itemRef;
     this.itemChange.emit(item.itemRef);
@@ -119,9 +123,53 @@ export class DropDownComponent<T> {
     this.searchTextChange.emit(text);
   }
 
+  keydownEventHandler(e: KeyboardEvent, i: number) {
+    console.log(e.key)
+    if (e.key == 'ArrowDown' && i < this.items.length - 1) {
+      e.preventDefault();
+      this.focusNextElement(e.target as HTMLElement);
+    } else if (e.key == 'ArrowUp' && i > 0){
+      e.preventDefault();
+      this.focusPreviousElement(e.target as HTMLElement);
+    } else if (e.key == 'Enter' || e.key == ' ') {
+      e.preventDefault();
+      this.selectionChanged(this.selectableItems[i]);
+    } else if (e.key == 'Tab' && i == this.items.length - 1) {
+        e.preventDefault();
+        this.showContent = false;
+      }
+  }
+
   /**********************************************************************************************
    * PRIVATE METHODS
    **********************************************************************************************/
+
+  private focusNextElement(current: HTMLElement): void {
+    const focusableElements = Array.from(document.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )).filter(el => !el.hasAttribute('disabled') && !el.getAttribute('aria-hidden'));
+
+    const currentIndex = focusableElements.indexOf(current);
+    const nextElement = focusableElements[currentIndex + 1];
+
+    if (nextElement) {
+      nextElement.focus();
+    }
+  }
+
+  private focusPreviousElement(current: HTMLElement): void {
+    const focusableElements = Array.from(document.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )).filter(el => !el.hasAttribute('disabled') && !el.getAttribute('aria-hidden'));
+
+    const currentIndex = focusableElements.indexOf(current);
+    const nextElement = focusableElements[currentIndex - 1];
+
+    if (nextElement) {
+      nextElement.focus();
+    }
+  }
+
   private asSelectables(items: T[]): SelectableItem<T>[] {
     const selectables: SelectableItem<T>[] = [];
     items.forEach((item: T) => {

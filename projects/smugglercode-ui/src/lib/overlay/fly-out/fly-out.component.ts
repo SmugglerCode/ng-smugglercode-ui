@@ -49,6 +49,17 @@ export class FlyOutComponent {
   /****************** CONSTRUCTOR **********************************/
   constructor(private cdr: ChangeDetectorRef) {}
 
+  keydownEventHandler(e: KeyboardEvent) {
+    if (e.key == 'ArrowDown' && this.showContent == false) {
+      this.toggleFlyOut();
+    } else if (e.key == 'ArrowDown' && this.showContent == true) {
+      this.focusNextElement(e.target as HTMLElement);
+    }
+     else if (e.key == 'ArrowUp' && this.showContent == true) {
+      this.toggleFlyOut();
+    }
+  }
+
   private showDropdDown = (timestamp: number) => {
     if (this.timestampStart == 0) this.timestampStart = timestamp;
     
@@ -83,6 +94,8 @@ export class FlyOutComponent {
 
   toggleFlyOut(): void {
 
+    this.flyOutHeader.nativeElement.focus();
+
     if(this.disabled) return;
 
     this.timestampStart = 0;
@@ -101,6 +114,18 @@ export class FlyOutComponent {
     }
   }
 
+  private focusNextElement(current: HTMLElement): void {
+    const focusableElements = Array.from(document.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )).filter(el => !el.hasAttribute('disabled') && !el.getAttribute('aria-hidden'));
+
+    const currentIndex = focusableElements.indexOf(current);
+    const nextElement = focusableElements[currentIndex + 1];
+
+    if (nextElement) {
+      nextElement.focus();
+    }
+  }
   /**********************************************************************************************
    * HOSTLISTENERS
    **********************************************************************************************/

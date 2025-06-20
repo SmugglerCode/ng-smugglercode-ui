@@ -1,11 +1,13 @@
-<div class="sc-fly-out-container" #flyOutHeader tabindex="0" (focus)="toggleFlyOut()">
+<div class="sc-fly-out-container">
 
   <!-- HEADER -->
   <div class="sc-fly-out-header"
        [class.disabled]="disabled"
        style="overflow: hidden"
        (click)="toggleFlyOut()"
-       #flyoutheader>
+       #flyOutHeader
+       (keydown)="keydownEventHandler($event)"
+       tabindex="0">
     <div class="grid grid-1fr-auto">
 
       <!-- HEADER CONTENT -->
@@ -24,7 +26,7 @@
   <!--  DROP DOWN PART  -->
   <div class="sc-fly-out-placeholder">
     <!-- FLY OUT CONTENT-->
-        <div class="fly-out-content scrollbar"
+        <div class="sc-fly-out-content scrollbar"
             *ngIf="contentHeight > 0"
             [style.height.px]="contentHeight"
             #flyOutContent>

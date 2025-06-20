@@ -10,12 +10,14 @@ import { ColorInfo } from '../../projects/smugglercode-ui/src/lib/color-tools/mo
 export class AppComponent {
   title = 'smugglercode-ui-sandbox';
 
-  color = ['green', 'red', 'yellow','green', 'red', 'yellow','green', 'red', 'yellow','green', 'red', 'yellow','green', 'red', 'yellow','green', 'red', 'yellow','green', 'red', 'yellow'];
+  showCustomerDetails: boolean = true;
+
+  color = ['green', 'red', 'yellow'];
 
   person: Person = new Person();
   colors: ColorInfo[] = [];
 
-  iconPressedEventHandler(value: string |number) : void {
+  iconPressedEventHandler(value: string |number) : void { 
     alert(value);
   }
 

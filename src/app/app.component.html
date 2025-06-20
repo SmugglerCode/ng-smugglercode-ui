@@ -2,6 +2,8 @@
 
 <div class="grid-1fr-1fr">
 
+
+    
     <sc-header [size]="2">General info</sc-header>
 
     <sc-input-group label="Name" style="grid-column: 1;">
@@ -26,10 +28,18 @@
 
     <div></div>
 
-    <div class="grid-auto-1fr">
-        <sc-input-group label="Zipcode" width="150px">
-            <sc-text-box [showClearIcon]="true" (onIconPressed)="iconPressedEventHandler($event)" [icon]="'sc-search'" [maxLength]="10"></sc-text-box>
+    <div style="display:grid;grid-template-columns: auto 1fr;grid-gap:10px;">
+
+        <div>
+            <sc-input-group label="Zipcode" width="150px">
+                <sc-text-box [showClearIcon]="true" (onIconPressed)="iconPressedEventHandler($event)" [icon]="'sc-search'" [maxLength]="10"></sc-text-box>
+            </sc-input-group>
+
+            <sc-input-group>
+            <sc-check-box [(checked)]="showCustomerDetails">België</sc-check-box>
         </sc-input-group>
+
+        </div>
 
         <sc-input-group label="City">
             <sc-text-box [showClearIcon]="true" [(text)]="person.name"></sc-text-box>
@@ -46,8 +56,8 @@
 <sc-input-group label="Kleuren">
     <sc-drop-down [dropDownHeight]="300" [items]="color">
         <ng-template #contentTemplate let-color>
-            <div class="custom-country">
-                <div style="width:20px;height:20px;" [style.color]="color"></div> {{ color }} xc
+            <div>
+                Kleur: {{ color }}
             </div>
         </ng-template>
     </sc-drop-down>
