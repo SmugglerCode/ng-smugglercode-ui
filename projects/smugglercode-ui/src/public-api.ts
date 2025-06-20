@@ -13,5 +13,6 @@ export * from './lib/forms/InputGroup/InputGroup.component';
 export * from './lib/inputs/text-box/text-box.component';
 
 export * from './lib/color-tools/models/color-info.model';
+export * from './lib/common/models/selectable-item.model';
 
 export * from './lib/common/services/property-logic.service';
