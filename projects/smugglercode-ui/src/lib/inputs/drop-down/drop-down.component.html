@@ -13,14 +13,16 @@
       >
 
         <!-- HEADER - NO TEMPLATE SET -->
-        <span *ngIf="!headerTemplate && item" class="drop-down-header" [class.disabled]="disabled"  >
+        <span *ngIf="!headerTemplate && item" 
+              class="drop-down-header"
+              [class.disabled]="disabled"  >
           <ng-container *ngIf="!displayProperty">{{ item }}</ng-container>
           <ng-container *ngIf="displayProperty">{{ selectableItem?.label }}</ng-container>
         </span>
 
         <!-- HEADER - TEMPLATE -->
         <ng-container *ngIf="headerTemplate">
-          <ng-container *ngTemplateOutlet="headerTemplate;context: { $implicit: item }"></ng-container>
+          <ng-container *ngTemplateOutlet="headerTemplate!;context: { $implicit: item }"></ng-container>
         </ng-container>
 
         <!-- NO ITEM SELECTED - PLACEHOLDER -->
@@ -49,21 +51,21 @@
       <div class="sc-drop-down-item" 
           tabindex="0" 
           (keydown)="keydownEventHandler($event, i)" 
-          (click)="selectionChanged(item)" 
-          [class.sc-selected]="item.isSelected"
-          *ngFor="let item of selectableItems; let i = index">
-        {{ item.label }}
+          (click)="selectionChanged(option)" 
+          [class.sc-selected]="option.isSelected"
+          *ngFor="let option of selectableItems; let i = index">
+        {{ option.label }}
       </div>
     </ng-container>
 
     <!-- TEMPLATE -->
     <ng-container *ngIf="contentTemplate">
-      <ng-container *ngFor="let item of selectableItems; let i = index">
+      <ng-container *ngFor="let option of selectableItems; let i = index">
         <div class="sc-drop-down-item" 
              tabindex="0"
              (keydown)="keydownEventHandler($event, i)" 
-             (click)="selectionChanged(item)">
-          <ng-container *ngTemplateOutlet="contentTemplate;context:{$implicit: item.itemRef}" ></ng-container>
+             (click)="selectionChanged(option)">
+          <ng-container *ngTemplateOutlet="contentTemplate!;context:{$implicit: option.itemRef}" ></ng-container>
         </div>
       </ng-container>
     </ng-container>

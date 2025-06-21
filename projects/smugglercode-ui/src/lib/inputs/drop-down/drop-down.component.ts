@@ -38,7 +38,7 @@ export class DropDownComponent<T> {
   @Input() dropDownHeight: number = 400;
 
   @Input() set items(val: T[]) {
-    this._items = val;
+    this._items = val ?? []; 
     if (this._isInitMode === false) {
       this._fullList = this.asSelectables(this._items);
       this.selectableItems = [...this._fullList];
