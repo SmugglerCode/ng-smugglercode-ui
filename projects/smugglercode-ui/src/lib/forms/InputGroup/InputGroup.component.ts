@@ -5,7 +5,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   selector: 'sc-input-group',
   imports: [NgIf],
   templateUrl: './InputGroup.component.html',
-  styleUrl: './InputGroup.component.scss',
+  styleUrls: ['./InputGroup.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InputGroupComponent { 

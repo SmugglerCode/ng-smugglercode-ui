@@ -5,7 +5,7 @@ import { NgIf} from '@angular/common'
   selector: 'sc-check-box',
   imports: [NgIf],
   templateUrl: './check-box.component.html',
-  styleUrl: './check-box.component.scss',
+  styleUrls: ['./check-box.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CheckBoxComponent {

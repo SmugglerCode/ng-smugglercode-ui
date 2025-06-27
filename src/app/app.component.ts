@@ -5,7 +5,7 @@ import { ColorInfo } from '../../projects/smugglercode-ui/src/lib/color-tools/mo
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: false,
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'smugglercode-ui-sandbox';

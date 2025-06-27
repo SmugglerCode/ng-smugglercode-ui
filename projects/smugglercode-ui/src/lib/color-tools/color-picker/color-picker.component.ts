@@ -7,7 +7,7 @@ import { TextBoxComponent } from "./../../inputs/text-box/text-box.component";
   selector: 'sc-color-picker',
   imports: [TextBoxComponent],
   templateUrl: './color-picker.component.html',
-  styleUrl: './color-picker.component.scss',
+  styleUrls: ['./color-picker.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ColorPickerComponent {
