@@ -5,7 +5,7 @@ import { ButtonType } from './enums/button-type.enum';
   selector: 'sc-button',
   imports: [],
   templateUrl: './button.component.html',
-  styleUrl: './button.component.scss',
+  styleUrls: ['./button.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent { 

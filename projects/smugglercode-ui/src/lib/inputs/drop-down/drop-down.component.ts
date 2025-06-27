@@ -7,7 +7,7 @@ import { TextBoxComponent, FlyOutComponent, PropertyLogicService } from '../../.
   selector: 'sc-drop-down',
   imports: [FlyOutComponent, TextBoxComponent, NgTemplateOutlet, NgIf, NgFor],
   templateUrl: './drop-down.component.html',
-  styleUrl: './drop-down.component.scss',
+  styleUrls: ['./drop-down.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DropDownComponent<T> {

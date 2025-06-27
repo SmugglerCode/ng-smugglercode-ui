@@ -6,7 +6,7 @@ import { ColorInfo } from '../models/color-info.model';
   selector: 'sc-color-palette',
   imports: [NgFor],
   templateUrl: './color-palette.component.html',
-  styleUrl: './color-palette.component.scss',
+  styleUrls: ['./color-palette.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ColorPaletteComponent { 

@@ -5,7 +5,7 @@ import { NgIf } from '@angular/common'
   selector: 'sc-fly-out',
   imports: [NgIf],
   templateUrl: './fly-out.component.html',
-  styleUrl: './fly-out.component.scss',
+  styleUrls: ['./fly-out.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FlyOutComponent { 

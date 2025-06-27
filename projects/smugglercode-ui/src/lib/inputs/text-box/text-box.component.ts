@@ -5,7 +5,7 @@ import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, Ou
   selector: 'sc-text-box',
   imports: [CommonModule],
   templateUrl: './text-box.component.html',
-  styleUrl: './text-box.component.scss',
+  styleUrls: ['./text-box.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TextBoxComponent {
